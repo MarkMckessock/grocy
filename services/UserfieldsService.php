@@ -30,6 +30,8 @@ class UserfieldsService extends BaseService
 
 	const USERFIELD_TYPE_SINGLE_MULTILINE_TEXT = 'text-multi-line';
 
+	const USERFIELD_TYPE_REFERENCE = 'reference';
+
 	protected $OpenApiSpec = null;
 
 	public function GetAllFields()

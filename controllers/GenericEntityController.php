@@ -44,6 +44,7 @@ class GenericEntityController extends BaseController
 				'mode' => 'edit',
 				'userfield' => $this->getUserfieldsService()->GetField($args['userfieldId']),
 				'userfieldTypes' => $this->getUserfieldsService()->GetFieldTypes(),
+				'fields' => $this->getUserfieldsServer()->GetAllFields(),
 				'entities' => $this->getUserfieldsService()->GetEntities()
 			]);
 		}

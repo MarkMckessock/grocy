@@ -118,6 +118,50 @@
 					name="config">@if($mode == 'edit'){{ $userfield->config }}@endif</textarea>
 			</div>
 
+			<div class="form-group d-none">
+				<label for="reference-entity">
+					{{ $__t('Reference Entity') }}
+					<i class="fas fa-question-circle text-muted"
+						data-toggle="tooltip"
+						data-trigger="hover click"
+						title="{{ $__t('The entity this field will reference') }}"></i>
+				</label>
+				<select required
+					class="custom-control custom-select"
+					id="reference-entity"
+					name="reference-entity">
+					<option></option>
+					@foreach($entities as $entity)
+					<option @if($mode=='edit'
+						&&
+						$userfield->entity == $entity) selected="selected" @endif value="{{ $entity }}">{{ $entity }}</option>
+					@endforeach
+				</select>
+				<div class="invalid-feedback">{{ $__t('A entity is required') }}</div>
+			</div>
+
+			<div class="form-group d-none">
+				<label for="reference-display-field">
+					{{ $__t('Display Field') }}
+					<i class="fas fa-question-circle text-muted"
+						data-toggle="tooltip"
+						data-trigger="hover click"
+						title="{{ $__t('The field on the referenced entity to display') }}"></i>
+				</label>
+				<select required
+					class="custom-control custom-select"
+					id="reference-display-field"
+					name="reference-display-field">
+					<option></option>
+					@foreach($entities as $entity)
+					<option @if($mode=='edit'
+						&&
+						$userfield->entity == $entity) selected="selected" @endif value="{{ $entity }}">{{ $entity }}</option>
+					@endforeach
+				</select>
+				<div class="invalid-feedback">{{ $__t('A field is required') }}</div>
+			</div>
+
 			<div class="form-group">
 				<div class="custom-control custom-checkbox">
 					<input @if($mode=='edit'

@@ -101,7 +101,22 @@ $("#type").on("change", function(e)
 		$("#config").parent().addClass("d-none");
 		$("#config-hint").text("");
 	}
+
+	if (value === "reference")
+	{
+		$("#reference-entity").parent().removeClass("d-none");
+	}
+	else
+	{
+		$("#reference-entity").parent().addClass("d-none");
+	}
 });
+
+$("#reference-entity").on("change", function(e)
+{
+	var value = $(this).val();
+}
+);
 
 $('#entity').focus();
 

@@ -32,6 +32,10 @@
 			@if($userfield->input_required == 1) required @endif></textarea>
 		<div class="invalid-feedback">{{ $__t('Mandatory Userfield') }}</div>
 	</div>
+	@elseif($userfield->type == \Grocy\Services\UserfieldsService::USERFIELD_TYPE_REFERENCE)
+	<div class="form-group">
+		<!-- TODO -->
+	</div>
 	@elseif($userfield->type == \Grocy\Services\UserfieldsService::USERFIELD_TYPE_INTEGRAL_NUMBER)
 	@include('components.numberpicker', array(
 	'id' => $userfield->name,

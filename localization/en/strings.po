@@ -63,6 +63,21 @@ msgstr "Battery tracking"
 msgid "Products"
 msgstr "Products"
 
+msgid "Reference Entity"
+msgstr "Reference Entity"
+
+msgid "The entity this field will reference"
+msgstr "The entity this field will reference"
+
+msgid "Display Field"
+msgstr "Display Field"
+
+msgid "The field on the referenced entity to display"
+msgstr "The field on the referenced entity to display"
+
+msgid "A field is required"
+msgstr "A field is required"
+
 msgid "Locations"
 msgstr "Locations"
 

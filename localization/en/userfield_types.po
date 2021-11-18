@@ -50,3 +50,6 @@ msgstr "File"
 
 msgid "image"
 msgstr "Image"
+
+msgid "reference"
+msgstr "Reference"
