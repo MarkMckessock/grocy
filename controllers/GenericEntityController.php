@@ -35,7 +35,8 @@ class GenericEntityController extends BaseController
 			return $this->renderPage($response, 'userfieldform', [
 				'mode' => 'create',
 				'userfieldTypes' => $this->getUserfieldsService()->GetFieldTypes(),
-				'entities' => $this->getUserfieldsService()->GetEntities()
+				'entities' => $this->getUserfieldsService()->GetEntities(),
+				'fields' => $this->getUserfieldsServer()->GetAllFields()
 			]);
 		}
 		else
