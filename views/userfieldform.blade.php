@@ -17,14 +17,14 @@
 
 <hr class="my-2">
 
-<script>
-   var fields = <?php echo json_encode($fields)?>;
-</script>
-
 <div class="row">
 	<div class="col-lg-6 col-12">
 		<script>
 			Grocy.EditMode = '{{ $mode }}';
+		</script>
+
+		<script>
+			Grocy.fields = <?php echo json_encode($fields)?>;
 		</script>
 
 		@if($mode == 'edit')

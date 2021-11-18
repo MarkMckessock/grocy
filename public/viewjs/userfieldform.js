@@ -124,7 +124,7 @@ $("#reference-entity").on("change", function(e)
 	{
 		$referenceEntity.parent().removeClass("d-none");
 		$referenceEntity.find('option').remove();
-		$.each(fields, function(field)
+		$.each(Grocy.fields, function(field)
 		{
 			if (field.entity == value)
 			{
