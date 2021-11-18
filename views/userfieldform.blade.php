@@ -123,7 +123,7 @@
 			</div>
 
 			<div class="form-group d-none">
-				<label for="reference-entity">
+				<label for="reference_entity">
 					{{ $__t('Reference Entity') }}
 					<i class="fas fa-question-circle text-muted"
 						data-toggle="tooltip"
@@ -132,8 +132,8 @@
 				</label>
 				<select
 					class="custom-control custom-select"
-					id="reference-entity"
-					name="reference-entity">
+					id="reference_entity"
+					name="reference_entity">
 					<option></option>
 					@foreach($entities as $entity)
 					<option @if($mode=='edit'
@@ -145,7 +145,7 @@
 			</div>
 
 			<div class="form-group d-none">
-				<label for="reference-display-field">
+				<label for="reference_field">
 					{{ $__t('Display Field') }}
 					<i class="fas fa-question-circle text-muted"
 						data-toggle="tooltip"
@@ -154,8 +154,8 @@
 				</label>
 				<select
 					class="custom-control custom-select"
-					id="reference-display-field"
-					name="reference-display-field">
+					id="reference_field"
+					name="reference_field">
 					<option></option>
 					@foreach($entities as $entity)
 					<option @if($mode=='edit'
