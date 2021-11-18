@@ -119,6 +119,22 @@ $("#type").on("change", function(e)
 $("#reference-entity").on("change", function(e)
 {
 	var value = $(this).val();
+	var $referenceEntity = $("#reference-field");
+	if (value)
+	{
+		$referenceEntity.parent().removeClass("d-none");
+		$referenceEntity.find('option').remove();
+		$.each(fields, function(field)
+		{
+			if (field.entity == value)
+			{
+				$referenceEntity.append(`<option value="${field.name}">${field.name}</option>`);
+			}
+		});
+	} else
+	{
+		$("#reference-field").parent().addClass("d-none");
+	}
 }
 );
 

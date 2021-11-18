@@ -18,7 +18,7 @@
 <hr class="my-2">
 
 <script>
-    console.log(<?= json_encode($fields); ?>);
+   var fields = <?php echo json_encode($fields)?>;
 </script>
 
 <div class="row">
@@ -123,7 +123,7 @@
 			</div>
 
 			<div class="form-group d-none">
-				<label for="reference_entity">
+				<label for="reference-entity">
 					{{ $__t('Reference Entity') }}
 					<i class="fas fa-question-circle text-muted"
 						data-toggle="tooltip"
@@ -132,7 +132,7 @@
 				</label>
 				<select
 					class="custom-control custom-select"
-					id="reference_entity"
+					id="reference-entity"
 					name="reference_entity">
 					<option></option>
 					@foreach($entities as $entity)
@@ -145,7 +145,7 @@
 			</div>
 
 			<div class="form-group d-none">
-				<label for="reference_field">
+				<label for="reference-field">
 					{{ $__t('Display Field') }}
 					<i class="fas fa-question-circle text-muted"
 						data-toggle="tooltip"
@@ -154,14 +154,8 @@
 				</label>
 				<select
 					class="custom-control custom-select"
-					id="reference_field"
+					id="reference-field"
 					name="reference_field">
-					<option></option>
-					@foreach($entities as $entity)
-					<option @if($mode=='edit'
-						&&
-						$userfield->entity == $entity) selected="selected" @endif value="{{ $entity }}">{{ $entity }}</option>
-					@endforeach
 				</select>
 				<div class="invalid-feedback">{{ $__t('A field is required') }}</div>
 			</div>
