@@ -130,7 +130,7 @@
 						data-trigger="hover click"
 						title="{{ $__t('The entity this field will reference') }}"></i>
 				</label>
-				<select required
+				<select
 					class="custom-control custom-select"
 					id="reference-entity"
 					name="reference-entity">
@@ -152,7 +152,7 @@
 						data-trigger="hover click"
 						title="{{ $__t('The field on the referenced entity to display') }}"></i>
 				</label>
-				<select required
+				<select
 					class="custom-control custom-select"
 					id="reference-display-field"
 					name="reference-display-field">

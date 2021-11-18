@@ -105,10 +105,14 @@ $("#type").on("change", function(e)
 	if (value === "reference")
 	{
 		$("#reference-entity").parent().removeClass("d-none");
+		$("#reference-entity").prop('required', true);
+
 	}
 	else
 	{
 		$("#reference-entity").parent().addClass("d-none");
+		$("#reference-entity").prop('required', false);
+
 	}
 });
 
